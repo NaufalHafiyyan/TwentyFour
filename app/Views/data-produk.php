@@ -52,17 +52,19 @@ $result = mysqli_query($mysqli, "SELECT * FROM barang")
                         <?php
                             while($data_barang = mysqli_fetch_array($result)) {
                                 echo "<tr>";
-                                echo "<td></td>";
-                                echo "<td></td>";
                                 echo "<td>".$data_barang["id_barang"]."</td>";
+                                echo "<td></td>";
+                                echo "<td>".$data_barang["nama_barang"]."</td>";
                                 echo "<td>".$data_barang["Harga"]."</td>";
                                 echo "<td>".$data_barang["Stok_barang"]."</td>";
                                 echo "<td></td>";
-                                echo "<td></td>";
+                                $gambar_url = 'http://localhost/twentyfour_app/public/images/' . $data_barang["gambar"];
+                                echo "<td><img src='" . $gambar_url . "' alt='Gambar Produk' width='50px'></td>";
                                 echo "<td></td>";
                                 echo "</tr>";
                             }
                         ?>
+                    </tbody>
             </table>
             </div>
         </div>  

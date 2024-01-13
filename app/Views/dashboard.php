@@ -1,3 +1,7 @@
+<?php
+include_once("config.php");
+$result = mysqli_query($mysqli, "SELECT * FROM barang")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,12 +34,32 @@
             <div class="box">
                 <h4>Selamat Datang</h4>
             </div>
+            <div class="row mt-4" style="display: flex;">
+                <?php
+                // Assume $products is an array containing product data from the database
+                foreach ($result as $product) {
+                    echo '<div class="col col-4">';
+                    echo '<div class="card mb-4">';
+                    // Assuming $product['gambar'] contains the image filename
+                    $gambar_url = 'http://localhost/twentyfour_app/public/images/' . $product["gambar"];
+                    echo '<img src="' . $gambar_url . '" class="card-img-top" width="200px" alt="Product Image">';
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">' . $product['nama_barang'] . '</h5>';
+                    echo '<p class="card-text">Harga: ' . $product['Harga'] . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+
+            </div>
         </div>  
     </div>
 
     <!-- footer -->
-    <footer>
-        <div class="container">
+    <footer style="background: black;">
+        <div class="container text-white" style="color: white;">
             <small>Enjoy your shopping with Twenty Four</small>
         </div>
     </footer>
