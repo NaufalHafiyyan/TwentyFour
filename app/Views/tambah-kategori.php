@@ -16,7 +16,6 @@
             <ul>
                 <li><a href="/">Dashboard</a></li>
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/data-kategori">Data Kategori</a></li>
                 <li><a href="/data-produk">Data Produk</a></li>
                 <li><a href="/keluar">Keluar</a></li>
             </ul>
