@@ -21,7 +21,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM barang")
             <ul>
                 <li><a href="/">Dashboard</a></li>
                 <li><a href="/profile">Profil</a></li>
-                <li><a href="/data-produk">Data Produk</a></li>
+                <li><a href="/data-produk">Data Produk</a></li> 
                 <li><a href="#" data-toggle="modal" data-target="#logoutModal">Keluar</a></li>
             </ul>
         </div>
